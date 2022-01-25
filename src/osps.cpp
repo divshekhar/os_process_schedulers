@@ -1,6 +1,7 @@
 #include "../include/fcfs.hpp"
 #include "../include/sjf.hpp"
 #include "../include/srtf.hpp"
+#include "../include/rr.hpp"
 
 #include <iomanip>
 #include <string>
@@ -104,6 +105,16 @@ int main()
     case 3:
     {
         SRTF srtf(n, p);
+        break;
+    }
+    case 4:
+    {
+        RR rr(n, p);
+        break;
+    }
+    default:
+    {
+        std::cout << "Invalid choice" << std::endl;
         break;
     }
     }
