@@ -1,4 +1,4 @@
-FCFS_SOURCE_FILE = src/FCFS/fcfs.cpp
+FCFS_SOURCE_FILE = src/FCFS/fcfs.cpp src/SJF/sjf.cpp
 
 INCLUDES = $(wildcard $(include)/*.hpp)
 

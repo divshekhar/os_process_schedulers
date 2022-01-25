@@ -1,4 +1,5 @@
 #include "../include/fcfs.hpp"
+#include "../include/sjf.hpp"
 
 #include <iomanip>
 #include <string>
@@ -85,11 +86,20 @@ int main()
     switch (choice)
     {
     case 0:
+    {
         exit(0);
         break;
+    }
     case 1:
+    {
         FCFS fcfs(n, p);
         break;
+    }
+    case 2:
+    {
+        SJF sjf(n, p);
+        break;
+    }
     }
 
     return 0;

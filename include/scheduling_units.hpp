@@ -11,11 +11,6 @@ namespace osps
         float cpu_utilisation;
         float throughput;
 
-        int total_turnaround_time;
-        int total_waiting_time;
-        int total_response_time;
-        int total_idle_time;
-
     public:
         // constructor
         SchedulingUnits()
@@ -25,11 +20,6 @@ namespace osps
             avg_response_time = 0;
             cpu_utilisation = 0;
             throughput = 0;
-
-            total_turnaround_time = 0;
-            total_waiting_time = 0;
-            total_response_time = 0;
-            total_idle_time = 0;
         }
 
         // destructor
@@ -41,11 +31,6 @@ namespace osps
         float get_avg_response_time() { return avg_response_time; }
         float get_cpu_utilisation() { return cpu_utilisation; }
         float get_throughput() { return throughput; }
-
-        int get_total_turnaround_time() { return total_turnaround_time; }
-        int get_total_waiting_time() { return total_waiting_time; }
-        int get_total_response_time() { return total_response_time; }
-        int get_total_idle_time() { return total_idle_time; }
 
         // setters
         void set_avg_turnaround_time(float avg_turnaround_time)
@@ -71,26 +56,6 @@ namespace osps
         void set_throughput(float throughput)
         {
             this->throughput = throughput;
-        }
-
-        void set_total_turnaround_time(int total_turnaround_time)
-        {
-            this->total_turnaround_time = total_turnaround_time;
-        }
-
-        void set_total_waiting_time(int total_waiting_time)
-        {
-            this->total_waiting_time = total_waiting_time;
-        }
-
-        void set_total_response_time(int total_response_time)
-        {
-            this->total_response_time = total_response_time;
-        }
-
-        void set_total_idle_time(int total_idle_time)
-        {
-            this->total_idle_time = total_idle_time;
         }
 
         void display_scheduling_units()

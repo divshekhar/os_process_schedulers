@@ -33,10 +33,5 @@ void FCFS::solve()
     set_cpu_utilisation(((p[n - 1].get_completion_time() - total_idle_time) / (float)p[n - 1].get_completion_time()) * 100);
     set_throughput(float(n) / (p[n - 1].get_completion_time() - p[0].get_arrival_time()));
 
-    set_total_turnaround_time(total_turnaround_time);
-    set_total_waiting_time(total_waiting_time);
-    set_total_response_time(total_response_time);
-    set_total_idle_time(total_idle_time);
-
     std::sort(p, p + n, osps::Process::compareID);
 }
