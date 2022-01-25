@@ -2,10 +2,16 @@ FCFS_SOURCE_FILE = src/FCFS/fcfs.cpp
 SJF_SOURCE_FILE = src/SJF/sjf.cpp 
 SRTF_SOURCE_FILE = src/SRTF/srtf.cpp
 RR_SOURCE_FILE = src/RR/rr.cpp
+PS_SOURCE_FILE = src/PS/ps.cpp
 
 INCLUDES = $(wildcard $(include)/*.hpp)
 
-SOURCE_FILE = ${FCFS_SOURCE_FILE} ${SJF_SOURCE_FILE} ${SRTF_SOURCE_FILE} ${RR_SOURCE_FILE} ${source_path}
+SOURCE_FILE = ${FCFS_SOURCE_FILE} \
+			  ${SJF_SOURCE_FILE}  \
+			  ${SRTF_SOURCE_FILE} \
+			  ${RR_SOURCE_FILE}  \
+			  ${PS_SOURCE_FILE} \
+			  ${source_path}
 
 compiler_driver = g++
 

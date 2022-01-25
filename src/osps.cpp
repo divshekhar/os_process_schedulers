@@ -2,6 +2,7 @@
 #include "../include/sjf.hpp"
 #include "../include/srtf.hpp"
 #include "../include/rr.hpp"
+#include "../include/ps.hpp"
 
 #include <iomanip>
 #include <string>
@@ -74,15 +75,22 @@ int main()
     for (int i = 0; i < n; i++)
     {
         int arrival_time, burst_time;
+        int priority = 0;
         std::cout << "Enter arrival time of process " << i + 1 << ": ";
         std::cin >> arrival_time;
         std::cout << "Enter burst time of process " << i + 1 << ": ";
         std::cin >> burst_time;
 
+        if (choice == 5)
+        {
+            std::cout << "Enter priority of the process " << i + 1 << ": ";
+            std::cin >> priority;
+        }
+
         std::cout << std::endl;
 
         // Filling array with processes
-        p[i] = osps::Process(i + 1, arrival_time, burst_time, 0, 0, 0, 0, 0);
+        p[i] = osps::Process(i + 1, arrival_time, burst_time, 0, 0, 0, 0, 0, priority);
     }
 
     switch (choice)
@@ -110,6 +118,11 @@ int main()
     case 4:
     {
         RR rr(n, p);
+        break;
+    }
+    case 5:
+    {
+        PS ps(n, p);
         break;
     }
     default:

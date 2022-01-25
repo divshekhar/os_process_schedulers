@@ -13,6 +13,7 @@ namespace osps
         int turnaround_time;
         int waiting_time;
         int response_time;
+        int priority;
 
     public:
         Process()
@@ -25,10 +26,11 @@ namespace osps
             turnaround_time = 0;
             waiting_time = 0;
             response_time = 0;
+            priority = 0;
         }
 
         Process(int pid, int arrival_time, int burst_time, int start_time, int completion_time,
-                int turnaround_time, int waiting_time, int response_time)
+                int turnaround_time, int waiting_time, int response_time, int priority)
         {
             this->pid = pid;
             this->arrival_time = arrival_time;
@@ -38,6 +40,7 @@ namespace osps
             this->turnaround_time = turnaround_time;
             this->waiting_time = waiting_time;
             this->response_time = response_time;
+            this->priority = priority;
         }
 
         ~Process() {}
@@ -51,6 +54,7 @@ namespace osps
         int get_turnaround_time() { return turnaround_time; }
         int get_waiting_time() { return waiting_time; }
         int get_response_time() { return response_time; }
+        int get_priority() { return priority; }
 
         // Setters
         void set_pid(int pid) { this->pid = pid; }
@@ -61,6 +65,7 @@ namespace osps
         void set_turnaround_time(int turnaround_time) { this->turnaround_time = turnaround_time; }
         void set_waiting_time(int waiting_time) { this->waiting_time = waiting_time; }
         void set_response_time(int response_time) { this->response_time = response_time; }
+        void set_priority(int priority) { this->priority = priority; }
 
         static bool compareArrival(Process p1, Process p2)
         {
