@@ -1,5 +1,6 @@
 #include "../include/fcfs.hpp"
 #include "../include/sjf.hpp"
+#include "../include/srtf.hpp"
 
 #include <iomanip>
 #include <string>
@@ -100,7 +101,15 @@ int main()
         SJF sjf(n, p);
         break;
     }
+    case 3:
+    {
+        SRTF srtf(n, p);
+        break;
     }
+    }
+
+    // To hold the output screen
+    system("pause>nul");
 
     return 0;
 }
