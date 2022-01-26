@@ -10,6 +10,32 @@ Operating System Process Schedulers
 
 ## Quick Start
 
+<div align="center">
+<img src="./img/homescreen.jpg" width="80%" alt="Homescreen">
+</div>
+
+### Solution
+
+<div align="center">
+<img src="./img/solution.jpg" width="80%" alt="Homescreen">
+</div>
+
+## Build
+
+### Without Make
+
+Use this script to build the executable file.
+
+```bash
+g++ -std=c++17 -I ./include/ src/FCFS/fcfs.cpp src/SJF/sjf.cpp src/SRTF/srtf.cpp src/RR/rr.cpp src/PS/ps.cpp src/osps.cpp -o ./bin/osps.exe
+```
+
+Run the executable file using:
+
+```bash
+./bin/osps.exe
+```
+
 ### Using Make
 
 Build the executable file using:
@@ -25,6 +51,8 @@ make run
 ```
 
 Just use `make` to build & run the executable file.
+
+Use `make clean` to remove the executable file.
 
 ---
 
