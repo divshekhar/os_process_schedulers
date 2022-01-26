@@ -62,6 +62,12 @@ int main()
     std::cin >> choice;
     std::cout << "You have chosen " << scheduling_algo(choice) << std::endl;
 
+    if (!(choice >= 1 && choice <= 5))
+    {
+        std::cout << "Invalid choice. Exiting..." << std::endl;
+        return 0;
+    }
+
     int n;
     osps::Process p[100];
 
